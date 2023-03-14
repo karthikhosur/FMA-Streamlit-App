@@ -33,7 +33,7 @@ fig.update_layout(height=900,width=900,title_text='<b>Feature Distribution')
 fig.update_layout(template='plotly_dark',title_x=0.5)
 st.plotly_chart(fig)
 
-fig = px.bar(df.groupby('artist_name',as_index=False).count().sort_values(by='track_id',ascending=False).head(50),x='artist_name',y='track_id',labels={'track_id':'Total Songs'},width=1000,color_discrete_sequence=['green'],text='track_id',title='<b> List of Songs Recorded by Each Singer')
+fig = px.bar(df.groupby('artist_name',as_index=False).count().sort_values(by='track_id',ascending=False).head(50),x='artist_name',y='track_id',labels={'track_id':'Total Songs'},width=1000,color_discrete_sequence=['green'],text='track_id',title='<b> Top 50 Artists with Most Songs')
 st.plotly_chart(fig)
 
 
