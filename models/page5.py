@@ -54,3 +54,18 @@ def app(df: pd.DataFrame):
     fig3.update_xaxes(title_text='Genre')
     fig3.update_yaxes(title_text='Total Listens')
     st.plotly_chart(fig3)
+    st.markdown("""
+        ## Explanation of Attributes Used in Visualizations
+
+        **Song Popularity (`song_hotttnesss`):** A measure of the overall popularity of a song, ranging from 0 to 1. A higher value indicates greater popularity.
+
+        **Artist Popularity (`artist_hotttnesss`):** A measure of the overall popularity of an artist, ranging from 0 to 1. A higher value indicates greater popularity.
+
+        **Song Popularity Rank (`song_hotttnesss_rank`):** The rank of a song based on its popularity (`song_hotttnesss`) within the dataset.
+
+        **Listens (`listens_1`):** The total number of listens for a particular song.
+
+        **Genre (`genre_top`):** The primary genre associated with a song or artist.
+
+        These attributes are used in the visualizations to show relationships between song popularity, artist popularity, and total listens across different genres.
+        """)

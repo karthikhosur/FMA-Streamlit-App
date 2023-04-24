@@ -37,3 +37,4 @@ def app(df: pd.DataFrame):
 
     # Show the map
     st.plotly_chart(fig)
+    st.write("The visualization displays the geographic distribution of music in the USA and worldwide. ")

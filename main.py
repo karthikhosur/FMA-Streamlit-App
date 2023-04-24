@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from models.page0 import app as page0_app
 from models.page1 import app as page1_app
 from models.page2 import app as page2_app
 from models.page3 import app as page3_app
@@ -10,6 +11,7 @@ from models.page6 import app as page6_app
 st.set_page_config(page_title="Your App Name", page_icon=":guardsman:", layout="wide")
 
 PAGES = {
+    "Home": page0_app,
     "About the Data": page1_app,
     "FMA Data Trends": page2_app,
     "Producers Trends": page3_app,
@@ -37,3 +39,15 @@ selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
 
 page = PAGES[selection]
 page(df)
+
+st.sidebar.write("FMA Data Analysis project by Karthik Hosur and Diana Elizabeth Roy")
+
+st.sidebar.header("Links")
+st.sidebar.markdown(
+        "[Download Dataset](https://github.com/mdeff/fma)",
+        unsafe_allow_html=True,
+    )
+st.sidebar.markdown(
+        "[Source Code](https://github.com/karthikhosur/FMA-Streamlit-App.git)",
+        unsafe_allow_html=True,
+    )
