@@ -43,8 +43,9 @@ if 'df' not in st.session_state:
     st.session_state.df = df
 else:
     df = st.session_state.df
+st.sidebar.subheader("Free Music Archive (FMA) Data Analytics")
 
-st.sidebar.title("Navigation")
+st.sidebar.subheader("Navigation")
 selection = st.sidebar.selectbox("Go to", list(PAGES.keys()))
 
 page = PAGES[selection]
