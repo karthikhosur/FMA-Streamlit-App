@@ -7,6 +7,7 @@ from models.page3 import app as page3_app
 from models.page4 import app as page4_app
 from models.page5 import app as page5_app
 from models.page6 import app as page6_app
+import gdown
 
 st.set_page_config(page_title="FMA Music Data", page_icon=":guardsman:", layout="wide")
 
@@ -24,8 +25,17 @@ def load_data(csv_file):
     return pd.read_csv(csv_file)
 
 def get_data():
-    csv_file = 'data/merged_file.csv'
-    return load_data(csv_file)
+    try:
+        csv_file = 'data/merged_file.csv'
+        return load_data(csv_file)
+    except:
+        output = 'data/merged_file.csv'
+        url = "https://drive.google.com/uc?id=1b2xSsUtaD-oD3cygmpvZPY1gUi9oQoJK"
+        gdown.download(url, output, quiet=False)
+        
+
+        csv_file = 'data/merged_file.csv'
+        return load_data(csv_file)
 
 
 if 'df' not in st.session_state:
