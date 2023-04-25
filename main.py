@@ -8,7 +8,7 @@ from models.page4 import app as page4_app
 from models.page5 import app as page5_app
 from models.page6 import app as page6_app
 
-st.set_page_config(page_title="Your App Name", page_icon=":guardsman:", layout="wide")
+st.set_page_config(page_title="FMA Music Data", page_icon=":guardsman:", layout="wide")
 
 PAGES = {
     "Home": page0_app,
