@@ -17,6 +17,10 @@ The goal of this project is to provide an interactive and visually engaging way 
 - The ability to visualize the data in a variety of ways, including scatterplots, heatmaps, and histograms.
 
 
+## Demo
+
+https://karthikhosur-fma-streamlit-app-main-9gv6n3.streamlit.app/
+
 ## Run Locally
 
 Clone the project
